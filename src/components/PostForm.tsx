@@ -109,9 +109,9 @@ const PostForm = ({ isEdit = false }: PostFormProps) => {
 			const newPost: Post = {
 				id: Date.now().toString(),
 				...formData,
-				date: new Date().toISOString().split("T")[0],
+				date: new Date().toISOString(),
 			};
-			savePostsToStorage([...posts, newPost]);
+			savePostsToStorage([newPost, ...posts]);
 			alert("Đăng bài thành công!");
 			navigate("/");
 		}
