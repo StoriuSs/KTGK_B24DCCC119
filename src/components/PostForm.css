@@ -1,0 +1,247 @@
+.post-form-container {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 3rem 2rem;
+	min-height: calc(100vh - 60px);
+	background: transparent;
+}
+
+.post-form-card {
+	background: white;
+	border-radius: 20px;
+	padding: 3.5rem;
+	box-shadow: 0 12px 40px rgba(30, 60, 114, 0.1);
+	border: 1px solid rgba(30, 60, 114, 0.08);
+}
+
+.post-form-card h1 {
+	font-size: 2.8rem;
+	color: #1e3c72;
+	margin-bottom: 2.5rem;
+	text-align: center;
+	background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e57c2 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	font-weight: 900;
+	letter-spacing: -0.8px;
+}
+
+.post-form {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+}
+
+.form-group label {
+	font-weight: 700;
+	color: #1e3c72;
+	font-size: 1.05rem;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+	padding: 1.1rem 1.3rem;
+	border: 2px solid #e1e8f0;
+	border-radius: 12px;
+	font-size: 1.05rem;
+	font-family: inherit;
+	transition: all 0.3s ease;
+	background: #f8f9fd;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+	outline: none;
+	border-color: #2a5298;
+	background: white;
+	box-shadow: 0 4px 20px rgba(42, 82, 152, 0.15);
+}
+
+.form-group input.error,
+.form-group textarea.error {
+	border-color: #ff6b6b;
+	background: #fff5f5;
+	box-shadow: 0 4px 16px rgba(255, 107, 107, 0.12);
+}
+
+.form-group textarea {
+	resize: vertical;
+	min-height: 250px;
+	line-height: 1.7;
+}
+
+.image-mode-toggle {
+	display: flex;
+	gap: 0.8rem;
+	margin-bottom: 1rem;
+}
+
+.mode-btn {
+	flex: 1;
+	padding: 0.8rem 1.5rem;
+	border: 2px solid #e1e8f0;
+	background: white;
+	border-radius: 10px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	color: #5a6c8f;
+	font-size: 0.95rem;
+}
+
+.mode-btn:hover {
+	border-color: #2a5298;
+	color: #1e3c72;
+}
+
+.mode-btn.active {
+	background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+	color: white;
+	border-color: transparent;
+	box-shadow: 0 4px 16px rgba(30, 60, 114, 0.3);
+}
+
+.image-input {
+	width: 100%;
+	padding: 1.1rem 1.3rem;
+	border: 2px solid #e1e8f0;
+	border-radius: 12px;
+	font-size: 1.05rem;
+	transition: all 0.3s ease;
+	background: #f8f9fd;
+}
+
+.file-upload-wrapper {
+	position: relative;
+}
+
+.file-input {
+	display: none;
+}
+
+.file-label {
+	display: block;
+	padding: 1.5rem;
+	border: 3px dashed #e1e8f0;
+	border-radius: 12px;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	background: #f8f9fd;
+}
+
+.file-label:hover {
+	border-color: #2a5298;
+	background: white;
+}
+
+.file-label span {
+	color: #5a6c8f;
+	font-weight: 600;
+	font-size: 1.05rem;
+}
+
+.image-preview {
+	margin-top: 1rem;
+	border-radius: 12px;
+	overflow: hidden;
+	border: 2px solid #e1e8f0;
+	max-width: 100%;
+}
+
+.image-preview img {
+	width: 100%;
+	max-height: 300px;
+	object-fit: cover;
+	display: block;
+}
+
+.error-message {
+	color: #ff6b6b;
+	font-size: 0.9rem;
+	margin-top: 0.3rem;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+}
+
+.error-message::before {
+	content: "⚠️";
+}
+
+.form-actions {
+	display: flex;
+	gap: 1.2rem;
+	margin-top: 2rem;
+}
+
+.btn-submit {
+	flex: 1;
+	padding: 1.2rem;
+	background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+	color: white;
+	border: none;
+	border-radius: 12px;
+	font-weight: 700;
+	font-size: 1.1rem;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	box-shadow: 0 6px 20px rgba(30, 60, 114, 0.3);
+}
+
+.btn-submit:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 10px 30px rgba(30, 60, 114, 0.4);
+	background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+}
+
+.btn-cancel {
+	flex: 1;
+	padding: 1.2rem;
+	background: white;
+	color: #5a6c8f;
+	border: 2px solid #e1e8f0;
+	border-radius: 12px;
+	font-weight: 700;
+	font-size: 1.1rem;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.btn-cancel:hover {
+	background: #f8f9fd;
+	border-color: #ff6b6b;
+	color: #ff6b6b;
+	transform: translateY(-2px);
+}
+
+@media (max-width: 576px) {
+	.post-form-card {
+		padding: 2rem;
+	}
+
+	.post-form-card h1 {
+		font-size: 2rem;
+	}
+
+	.form-actions {
+		flex-direction: column;
+	}
+
+	.image-mode-toggle {
+		flex-direction: column;
+	}
+}
